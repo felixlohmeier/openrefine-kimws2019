@@ -475,5 +475,12 @@
     "newColumnName": "VIAF ID",
     "columnInsertIndex": 12,
     "description": "Create column VIAF ID at index 12 based on column Publisher using expression grel:cell.recon.match.id"
+  },
+  {
+    "op": "core/multivalued-cell-join",
+    "columnName": "Authors",
+    "keyColumnName": "Title",
+    "separator": "|",
+    "description": "Join multi-valued cells in column Authors"
   }
 ]
