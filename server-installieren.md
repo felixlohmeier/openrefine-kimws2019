@@ -76,6 +76,11 @@ apt update && apt upgrade
 
   - ```
     apt install openjdk-8-jre-headless unzip
+    ```
+
+- Java Workaround für Cloud-Server
+
+  - ```
     sed -i 's/securerandom.source=file:\/dev\/random/securerandom.source=file:\/dev\/urandom/' /etc/java-8-openjdk/security/java.security
     ```
 
