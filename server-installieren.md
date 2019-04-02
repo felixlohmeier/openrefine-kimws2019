@@ -2,6 +2,8 @@
 
 Benötigt wird ein Linux Webserver mit Ubuntu 18.04 LTS und 4 GB RAM
 
+Achtung: Diese Anleitung ist nur für eine kurzzeitige Verwendung gedacht. Die verwendeten Dienste (OpenRefine, Solr) stehen frei im Netz und müssten für einen dauerhaften Betrieb noch abgesichert werden.
+
 ## 1. Installation Webserver
 
 #### Variante A: Installation mit VirtualBox
@@ -116,8 +118,12 @@ apt update && apt upgrade
     systemctl start openrefine.service
     ```
 
+- OpenRefine service unter Port 80 erreichbar machen
+
   - ```
     iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 3333
+    iptables-save > /etc/iptables/rules.v4
+    apt install iptables-persistent
     ```
 
 - Installation OpenRefine client
@@ -132,8 +138,7 @@ apt update && apt upgrade
 - SSH erlauben
 
   - ```
-    sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
-    systemctl reload sshd
+    sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config && systemctl restart sshd
     ```
 
 - Beispieldateien in `/etc/skel` bereitlegen...
