@@ -14,9 +14,9 @@ Die Software OpenRefine ist bekannt für ihre grafische Oberfläche, die einem T
 Dieses Hands-On-Tutorial vom DINI AG KIM Workshop lässt sich auch Zuhause durchspielen:
 
 1. [Server installieren](server-installieren.md)
-2. Präsentation anschauen
+2. [Präsentation](praesentationsfolien.pdf) anschauen
 3. [Handout Teil 1](handout-teil1.md) durchspielen
-4. [Handout Teil 2](handout-teil2.md) durchspielen
+4. Handout Teil 2 durchspielen (folgt)
 
 ## Quellenangaben für mitgelieferte Dateien
 
